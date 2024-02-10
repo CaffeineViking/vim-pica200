@@ -98,6 +98,8 @@ syn keyword picaInstruction ifu
 syn keyword picaInstruction jmpu
 syn keyword picaInstruction mad
 
+syn case match
+
 hi def link picaTodo        Todo
 hi def link picaComment     Comment
 hi def link picaNumber      Number
@@ -109,7 +111,5 @@ hi def link picaOperator    Identifier
 hi def link picaDirective   PreProc
 hi def link picaDirMode     Identifier
 hi def link picaInstruction Keyword
-
-syn case match
 
 let b:current_syntax = "pica200"
