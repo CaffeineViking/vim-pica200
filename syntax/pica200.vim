@@ -12,8 +12,6 @@ syn match picaComment ";.*" contains=picaTodo
 syn match picaNumber "\<[-+]\?[0-9]\+\(\.[0-9]\+\)\?\>"
 syn match picaLabel "^\s*[a-z_$][a-z0-9_$]*:"he=e-1
 
-syn match picaOperator "\.[xyzw]\{1,4}\>"
-
 syn keyword picaRegister  o0  o1  o2  o3  o4  o5  o6  o7  o8  o9 o10 o11 o12 o13 o14 o15
 syn keyword picaRegister  v0  v1  v2  v3  v4  v5  v6  v7  v8  v9 v10 v11 v12 v13 v14 v15
 syn keyword picaRegister  r0  r1  r2  r3  r4  r5  r6  r7  r8  r9 r10 r11 r12 r13 r14 r15
@@ -25,6 +23,12 @@ syn keyword picaRegister c64 c65 c66 c67 c68 c69 c70 c71 c72 c73 c74 c75 c76 c77
 syn keyword picaRegister c80 c81 c82 c83 c84 c85 c86 c87 c88 c89 c90 c91 c92 c93 c94 c95
 syn keyword picaRegister  i0  i1  i2  i3
 syn keyword picaRegister  b0  b1  b2  b3  b4  b5  b6  b7  b8  b9 b10 b11 b12 b13 b14 b15
+
+syn match picaOperator "\.[xyzw]\{1,4}\>"
+syn match picaOperator "\.[rgba]\{1,4}\>"
+syn match picaOperator "\.[stpq]\{1,4}\>"
+syn keyword picaOperator eq ne lt le gt ge
+syn keyword picaOperator ! && ||
 
 syn match picaDirective "\.proc\>"
 syn match picaDirective "\.else\>"
@@ -44,6 +48,17 @@ syn match picaDirective "\.gsh\>"
 syn match picaDirective "\.setf\>"
 syn match picaDirective "\.seti\>"
 syn match picaDirective "\.setb\>"
+
+syn keyword picaDirMode pos position
+syn keyword picaDirMode nquat normalquat
+syn keyword picaDirMode clr color
+syn keyword picaDirMode tcoord0 texcoord0
+syn keyword picaDirMode tcoord0w texcoord0w
+syn keyword picaDirMode tcoord1 texcoord1
+syn keyword picaDirMode tcoord2 texcoord2
+syn keyword picaDirMode view
+syn keyword picaDirMode dummy
+syn keyword picaDirMode point variable fixed
 
 syn keyword picaInstruction nop
 syn keyword picaInstruction end
@@ -85,9 +100,10 @@ hi def link picaComment     Comment
 hi def link picaNumber      Number
 hi def link picaLabel       Label
 
-hi def link picaOperator    Identifier
 hi def link picaRegister    Type
+hi def link picaOperator    Identifier
 hi def link picaDirective   PreProc
+hi def link picaDirMode     Special
 hi def link picaInstruction Keyword
 
 syn case match
