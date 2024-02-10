@@ -27,9 +27,9 @@ syn keyword picaRegister  b0  b1  b2  b3  b4  b5  b6  b7  b8  b9 b10 b11 b12 b13
 syn match   picaOperator "\.[xyzw]\{1,4}\>"
 syn match   picaOperator "\.[rgba]\{1,4}\>"
 syn match   picaOperator "\.[stpq]\{1,4}\>"
-syn match   picaOperator "\<!"
-syn match   picaOperator "\<&&\>"
-syn match   picaOperator "\<||\>"
+syn match   picaOperator "\<\!"
+syn match   picaOperator "\<\&\&\>"
+syn match   picaOperator "\<\|\|\>"
 syn keyword picaOperator eq ne lt le gt ge
 
 syn match picaDirective "\.proc\>"
