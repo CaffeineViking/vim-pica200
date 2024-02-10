@@ -61,7 +61,7 @@ syn keyword picaDirMode tcoord1 texcoord1
 syn keyword picaDirMode tcoord2 texcoord2
 syn keyword picaDirMode view
 syn keyword picaDirMode dummy
-syn keyword picaDirMode point variable fixed
+syn keyword picaDirMode point variable fixed subdivision particle
 
 syn keyword picaInstruction nop
 syn keyword picaInstruction end
