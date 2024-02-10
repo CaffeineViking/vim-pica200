@@ -28,9 +28,9 @@ syn match picaSwizzle "\.[xyzw]\{1,4}\>"
 syn match picaSwizzle "\.[rgba]\{1,4}\>"
 syn match picaSwizzle "\.[stpq]\{1,4}\>"
 
-syn match picaOperator "\<!"
-syn match picaOperator "\<||\>"
-syn match picaOperator "\<&&\>"
+syn match picaOperator "\<\!"
+syn match picaOperator "\<\|\|\>"
+syn match picaOperator "\<\&\&\>"
 syn keyword picaOperator eq ne lt le gt ge
 
 syn match picaDirective "\.proc\>"
