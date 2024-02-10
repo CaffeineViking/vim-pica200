@@ -24,9 +24,10 @@ syn keyword picaRegister c80 c81 c82 c83 c84 c85 c86 c87 c88 c89 c90 c91 c92 c93
 syn keyword picaRegister  i0  i1  i2  i3
 syn keyword picaRegister  b0  b1  b2  b3  b4  b5  b6  b7  b8  b9 b10 b11 b12 b13 b14 b15
 
-syn match   picaOperator "\.[xyzw]\{1,4}\>"
-syn match   picaOperator "\.[rgba]\{1,4}\>"
-syn match   picaOperator "\.[stpq]\{1,4}\>"
+syn match   picaSwizzle "\.[xyzw]\{1,4}\>"
+syn match   picaSwizzle "\.[rgba]\{1,4}\>"
+syn match   picaSwizzle "\.[stpq]\{1,4}\>"
+
 syn keyword picaOperator eq ne lt le gt ge
 
 syn match picaDirective "\.proc\>"
@@ -100,7 +101,8 @@ hi def link picaNumber      Number
 hi def link picaLabel       Label
 
 hi def link picaRegister    Type
-hi def link picaOperator    Special
+hi def link picaOperator    Identifier
+hi def link picaSwizzle     Special
 hi def link picaDirective   PreProc
 hi def link picaDirMode     Identifier
 hi def link picaInstruction Keyword
