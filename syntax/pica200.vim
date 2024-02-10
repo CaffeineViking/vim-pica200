@@ -12,6 +12,8 @@ syn match picaComment ";.*" contains=picaTodo
 syn match picaNumber "\<[-+]\?[0-9]\+\(\.[0-9]\+\)\?\>"
 syn match picaLabel "^\s*[a-z_$][a-z0-9_$]*:"he=e-1
 
+syn match picaOperator "\.[xyzw]\{1,4}\>"
+
 syn keyword picaRegister  o0  o1  o2  o3  o4  o5  o6  o7  o8  o9 o10 o11 o12 o13 o14 o15
 syn keyword picaRegister  v0  v1  v2  v3  v4  v5  v6  v7  v8  v9 v10 v11 v12 v13 v14 v15
 syn keyword picaRegister  r0  r1  r2  r3  r4  r5  r6  r7  r8  r9 r10 r11 r12 r13 r14 r15
@@ -83,6 +85,7 @@ hi def link picaComment     Comment
 hi def link picaNumber      Number
 hi def link picaLabel       Label
 
+hi def link picaOperator    Identifier
 hi def link picaRegister    Type
 hi def link picaDirective   PreProc
 hi def link picaInstruction Keyword
