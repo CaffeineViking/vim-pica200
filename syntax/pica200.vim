@@ -8,8 +8,8 @@ endif
 syn case ignore
 
 syn keyword picaTodo contained TODO
-syn match picaComment ";.*" contains=TODO
-syn match picaNumber "[-+]\?[0-9]\+\(\.[0-9]\+\)\?"
+syn match picaComment ";.*" contains=picaTodo
+syn match picaNumber "[-+]\?[0-9]\+\(\.[0-9]\+\)\?\>"
 syn match picaLabel "^\s*[a-z_$][a-z0-9_$]*:"he=e-1
 
 syn keyword picaRegister  o0  o1  o2  o3  o4  o5  o6  o7  o8  o9 o10 o11 o12 o13 o14 o15
